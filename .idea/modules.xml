@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Fullscreen/Fullscreen.iml" filepath="$PROJECT_DIR$/Fullscreen/Fullscreen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LancherScrollBackground/LancherScrollBackground.iml" filepath="$PROJECT_DIR$/LancherScrollBackground/LancherScrollBackground.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WallPage.iml" filepath="$PROJECT_DIR$/WallPage.iml" />
+    </modules>
+  </component>
+</project>
