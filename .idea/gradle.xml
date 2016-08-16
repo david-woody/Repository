@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Fullscreen" />
             <option value="$PROJECT_DIR$/LancherScrollBackground" />
+            <option value="$PROJECT_DIR$/Mvpdemo" />
           </set>
         </option>
         <option name="myModules">
@@ -18,6 +19,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Fullscreen" />
             <option value="$PROJECT_DIR$/LancherScrollBackground" />
+            <option value="$PROJECT_DIR$/Mvpdemo" />
           </set>
         </option>
       </GradleProjectSettings>
