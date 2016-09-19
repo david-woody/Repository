@@ -7,6 +7,7 @@ import com.adoregeek.mvpdemo.weather.WeatherActivity;
 import javax.inject.Singleton;
 
 import dagger.Component;
+import retrofit2.Retrofit;
 
 /**
  * Created by Administrator on 2016/9/13 0013.
@@ -14,5 +15,5 @@ import dagger.Component;
 @Singleton
 @Component(modules = {AppModule.class, NetModule.class})
 public interface NetComponent {
-    void inject(WeatherActivity activity);
+    Retrofit getRetrofit();
 }

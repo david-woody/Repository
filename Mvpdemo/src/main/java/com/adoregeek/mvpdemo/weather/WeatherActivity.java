@@ -15,7 +15,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.adoregeek.mvpdemo.MyApplication;
 import com.adoregeek.mvpdemo.R;
@@ -27,23 +26,20 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class WeatherActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, WeatherContract.View {
     @BindView(R.id.et_content)
     EditText etContent;
     @BindView(R.id.btn_query)
     Button btnQuery;
 
-
     @Inject
-    SharedPreferences sharedPreferences;
-
+    WeatherPresenter mPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        ((MyApplication) getApplication()).getNetComponent().inject(this);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -62,6 +58,12 @@ public class WeatherActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+        DaggerWeatherComponent.builder()
+                .weatherModule(new WeatherModule(this))
+                .netComponent(((MyApplication)getApplication()).getNetComponent())
+                .build().inject(this);
     }
 
     @Override
@@ -123,8 +125,22 @@ public class WeatherActivity extends AppCompatActivity
 
     @OnClick(R.id.btn_query)
     public void onClick() {
-        Toast.makeText(this,"Replace with your own action",Toast.LENGTH_LONG).show();
-//        Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                .setAction("Action", null).show();
+
+        mPresenter.loadData();
+    }
+
+    @Override
+    public void setPresenter(WeatherContract.Presenter presenter) {
+
+    }
+
+    @Override
+    public void showLoading() {
+
+    }
+
+    @Override
+    public void hideLoading() {
+
     }
 }

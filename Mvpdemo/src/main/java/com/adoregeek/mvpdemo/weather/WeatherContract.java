@@ -12,7 +12,7 @@ public interface WeatherContract {
         }
 
         interface Presenter extends BasePresenter{
-
+             void   loadData();
         }
 
 }
