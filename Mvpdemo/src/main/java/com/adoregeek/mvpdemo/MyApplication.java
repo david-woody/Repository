@@ -20,7 +20,7 @@ public class MyApplication extends Application {
         AppLog.init();
         mNetComponent = DaggerNetComponent.builder()
                 .appModule(new AppModule(this))
-                .netModule(new NetModule("https://api.github.com"))
+                .netModule(new NetModule("http://api.openweathermap.org/data/2.5/"))
                 .build();
     }
 

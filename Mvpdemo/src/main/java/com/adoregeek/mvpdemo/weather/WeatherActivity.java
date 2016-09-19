@@ -1,6 +1,5 @@
 package com.adoregeek.mvpdemo.weather;
 
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -15,9 +14,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import com.adoregeek.mvpdemo.MyApplication;
 import com.adoregeek.mvpdemo.R;
+import com.adoregeek.mvpdemo.util.ImageLoadUtil;
 
 import javax.inject.Inject;
 
@@ -34,6 +35,8 @@ public class WeatherActivity extends AppCompatActivity
 
     @Inject
     WeatherPresenter mPresenter;
+    @BindView(R.id.ivWeatherIcon)
+    ImageView ivWeatherIcon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +65,7 @@ public class WeatherActivity extends AppCompatActivity
 
         DaggerWeatherComponent.builder()
                 .weatherModule(new WeatherModule(this))
-                .netComponent(((MyApplication)getApplication()).getNetComponent())
+                .netComponent(((MyApplication) getApplication()).getNetComponent())
                 .build().inject(this);
     }
 
@@ -125,7 +128,6 @@ public class WeatherActivity extends AppCompatActivity
 
     @OnClick(R.id.btn_query)
     public void onClick() {
-
         mPresenter.loadData();
     }
 
@@ -142,5 +144,10 @@ public class WeatherActivity extends AppCompatActivity
     @Override
     public void hideLoading() {
 
+    }
+
+    @Override
+    public void showWeatherIcon(String path) {
+        ImageLoadUtil.load(this,path,ivWeatherIcon);
     }
 }

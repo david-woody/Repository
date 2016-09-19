@@ -8,7 +8,7 @@ import com.adoregeek.mvpdemo.BaseView;
  */
 public interface WeatherContract {
         interface View extends BaseView<Presenter>{
-
+            void showWeatherIcon(String path);
         }
 
         interface Presenter extends BasePresenter{
