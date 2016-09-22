@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import com.adoregeek.mvpdemo.BaseActivity;
 import com.adoregeek.mvpdemo.MyApplication;
 import com.adoregeek.mvpdemo.R;
 import com.adoregeek.mvpdemo.util.ImageLoadUtil;
@@ -26,8 +27,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class WeatherActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, WeatherContract.View {
+public class WeatherActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener, WeatherContract.View {
     @BindView(R.id.et_content)
     EditText etContent;
     @BindView(R.id.btn_query)
