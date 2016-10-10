@@ -23,7 +23,6 @@ public class WeatherPresenter implements WeatherContract.Presenter {
         this.mView = mView;
         this.mWeatherManager = mWeatherManager;
     }
-
     @Override
     public void start() {
 
