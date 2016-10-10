@@ -19,6 +19,7 @@ import android.widget.ImageView;
 import com.adoregeek.mvpdemo.BaseActivity;
 import com.adoregeek.mvpdemo.MyApplication;
 import com.adoregeek.mvpdemo.R;
+import com.adoregeek.mvpdemo.common.util.AppLog;
 import com.adoregeek.mvpdemo.util.ImageLoadUtil;
 
 import javax.inject.Inject;
@@ -131,10 +132,6 @@ public class WeatherActivity extends BaseActivity implements NavigationView.OnNa
         mPresenter.loadData();
     }
 
-    @Override
-    public void setPresenter(WeatherContract.Presenter presenter) {
-
-    }
 
     @Override
     public void showLoading() {
@@ -148,6 +145,7 @@ public class WeatherActivity extends BaseActivity implements NavigationView.OnNa
 
     @Override
     public void showWeatherIcon(String path) {
+        AppLog.d(path);
         ImageLoadUtil.load(this,path,ivWeatherIcon);
     }
 }

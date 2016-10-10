@@ -15,6 +15,5 @@ public class ImageLoadUtil {
 
     public static void load(Context context, String path, ImageView view) {
         Glide.with(context).load(path).into(view);
-
     }
 }
