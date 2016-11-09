@@ -44,5 +44,5 @@ dependencies {
     compile 'com.orhanobut:logger:1.15'
     //图片加载扩展
     compile 'com.github.bumptech.glide:glide:3.7.0'
-    compile 'com.zhy:autolayout:1.4.1'
+    compile 'com.zhy:autolayout:1.4.5'
 }

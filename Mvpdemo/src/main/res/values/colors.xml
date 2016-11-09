@@ -3,4 +3,19 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <!-- 分割线 -->
+    <color name="divider_gray_in_white">#D6D7DC</color>
+    <color name="divider_gray_in_gray">#d6d6d6</color>
+
+    <!-- 主体文字,标题/标签 -->
+    <color name="txt_black">#293238</color>
+    <!-- 内容文字,正文 -->
+    <color name="txt_gray">#67666c</color>
+    <color name="txt_red">#F14A4A</color>
+    <color name="txt_orange">#F9854F</color>
+    <color name="txt_yello">#ffea01</color>
+
+    <!-- 辅助文字,提示 -->
+    <color name="txt_light_gray">#BEBEBE</color>
 </resources>

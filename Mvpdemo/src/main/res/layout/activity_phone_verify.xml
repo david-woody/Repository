@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="48px">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_stroke_edit_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/divider_gray_in_white"></RelativeLayout>
+
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="48dp"
+                android:layout_height="48dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/ic_phone" />
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/divider_gray_in_white"></RelativeLayout>
+
+            <EditText
+                android:id="@+id/etPhone"
+                style="@style/TextViewBody"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="8dp"
+                android:background="@null"
+                android:hint="请输入手机号"
+                android:maxLines="1"
+                android:text=""
+                android:textColorHint="@color/txt_light_gray" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_stroke_edit_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="48dp"
+                android:layout_height="48dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/ic_key" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/divider_gray_in_white"></RelativeLayout>
+
+
+            <EditText
+                android:id="@+id/etVerifyCode"
+                style="@style/TextViewBody"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="4"
+                android:background="@null"
+                android:hint="请输入验证码"
+                android:maxLines="1"
+                android:text=""
+                android:textColorHint="@color/txt_light_gray" />
+
+
+            <Button
+                android:id="@+id/btnGetVerifyCode"
+                style="@style/TextViewBody"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_weight="7"
+                android:background="@color/colorPrimary"
+                android:text="获取验证码"
+                android:textColor="@android:color/white" />
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <Button
+            android:id="@+id/btn_register"
+            style="@style/TextViewSubhead"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/shape_buttom_bg_colorprimary"
+            android:text="下一步"
+            android:textColor="@android:color/white" />
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>
