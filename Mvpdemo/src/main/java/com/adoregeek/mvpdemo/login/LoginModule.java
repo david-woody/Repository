@@ -24,13 +24,4 @@ public class LoginModule {
         return mView;
     }
 
-    @Provides
-    WeatherApiService providesWeatherApiService(Retrofit retrofit) {
-        return retrofit.create(WeatherApiService.class);
-    }
-
-    @Provides
-    WeatherManager prvoidesWeatherManager(WeatherApiService weatherApiService) {
-        return new WeatherManager(weatherApiService);
-    }
 }

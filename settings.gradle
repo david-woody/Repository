@@ -1,1 +1,1 @@
-include ':LancherScrollBackground', ':Fullscreen', ':Mvpdemo'
+include ':LancherScrollBackground', ':Fullscreen', ':Mvpdemo', ':VideoSplash'

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="videoUri" format="reference" />
+    <attr name="repeatable" format="boolean" />
+
+    <declare-styleable name="CustomVideoView">
+        <attr name="videoUri" />
+        <attr name="repeatable" />
+    </declare-styleable>
+
+</resources>
